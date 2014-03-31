@@ -30,7 +30,7 @@ EOF
 )`
     if test -n "$etimeToSeconds";then
 	if [ $etimeToSeconds -gt $MAX_PROCESS_LIVE_TIME_IN_SECONDS ];then
-	    echo "PID:$pid PROGRAM:$prog running process more than ${MAX_PROCESS_LIVE_TIME_IN_SECONDS} seconds, killing process..." 
+	    echo `date "+DATE: %m/%d/%y TIME: %H:%M:%S"` "PID:$pid PROGRAM:$prog running process more than ${MAX_PROCESS_LIVE_TIME_IN_SECONDS} seconds, killing process..." 
             kill -9 $pid
         fi
     fi
